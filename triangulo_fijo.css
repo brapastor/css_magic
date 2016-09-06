@@ -1,0 +1,41 @@
+div
+{
+    font-family:Arial;
+    background: peru;
+    margin: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 30px;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
+
+.triangulo_lateral{
+    transform:translateX(0);
+    transition-duration: 0.3s;
+
+}
+
+.triangulo_lateral:before{
+    content: '';
+    border-style: solid;
+    /*se pone 0 a donde quiero que apunte*/
+    border-width: 0 15px 15px 15px;
+    /*y color al opuesto de dell 0 left -> right */
+    border-color: transparent transparent peru transparent ;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -15px;
+    transition-duration: 0.3s;
+}
+.triangulo_lateral:hover
+{
+    transform: translateY(15px);
+}
+.triangulo_lateral:hover:before{
+    top: -13px;
+}
+

@@ -1,0 +1,36 @@
+div
+{
+    font-family:Arial;
+    background: peru;
+    margin: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 30px;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
+
+.triangulo_lateral{
+    transform:translateX(0);
+}
+
+.triangulo_lateral:before{
+    content: '';
+    border-style: solid;
+    /*se pone 0 a donde quiero que apunte*/
+    border-width: 15px 15px 15px 0;
+    /*y color al opuesto de dell 0 left -> right */
+    border-color: transparent peru transparent transparent ;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -15px;
+    transition-duration: 0.3s;
+}
+
+.triangulo_lateral:hover:before{
+    left: -13px;
+}
+
