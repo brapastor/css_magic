@@ -1,0 +1,13 @@
+div
+{
+    font-family:Arial;
+    background: peru;
+    margin: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 30px;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
