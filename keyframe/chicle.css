@@ -14,6 +14,32 @@ div
     vertical-align: middle;
 }
 
+.chicle:hover{
+    animation:1s chicle 1;
+}
+
+@keyframes chicle {
+   30%{
+       transform:scaleX(1.25) scaleY(0.75);
+   }
+    50%{
+        transform:scaleX(0.75) scaleY(1.25);
+    }
+
+    60%{
+        transform:scaleX(1.15) scaleY(0.85);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
