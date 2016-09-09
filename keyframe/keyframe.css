@@ -12,3 +12,17 @@ div
 p{
     padding-top: 15px;
 }
+
+.caja:hover{
+    animation:5s cambia_color 1;
+}
+
+@keyframes cambia_color {
+    0%{
+        background:blue;
+    }
+   50%{
+       background:red;
+       height: 200px;
+   } 
+}
