@@ -1,0 +1,38 @@
+div
+{
+    font-family:Arial;
+    background-color: #a8cf45;
+    margin: 15px 2px;
+    margin-left: 60px;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    padding: 5px 40px;
+    vertical-align: middle;
+}
+
+.velozIn{
+    animation: 1s velozIn 1;
+}
+
+@keyframes velozIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-200%)
+                skewX(30deg);
+    }
+
+    60%{
+        opacity: 1;
+        transform: translateX(-20%)
+        skewX(-30deg);
+    }
+
+    80%{
+        transform: translateX(0%)
+        skewX(15deg);
+    }
+}

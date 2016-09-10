@@ -1,0 +1,45 @@
+div.fadeApa{
+    font-family:Arial;
+    background-color: #a8cf45;
+    margin: 15px 2px;
+    margin-left: 60px;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    padding: 5px 40px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.fadeApa{
+    animation: 2s fadeApa 1;
+}
+
+.tapa{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 160px;
+    position:absolute;
+    background: white;
+    animation: 2s retirada 1;
+
+
+}
+@keyframes retirada {
+    0%{
+        left: 0;
+    }
+}
+@keyframes fadeApa {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8;
+    }
+
+}

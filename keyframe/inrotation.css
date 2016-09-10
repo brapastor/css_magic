@@ -1,0 +1,39 @@
+div
+{
+    font-family:Arial;
+    background-color: #a8cf45;
+    margin: 15px 2px;
+    margin-left: 60px;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    padding: 5px 40px;
+    vertical-align: middle;
+}
+
+.inrotation{
+    animation: 1s inRotation 1;
+}
+
+@keyframes inRotation {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%)
+                    rotate(-260deg);
+    }
+}
+
+.outrotation{
+    animation: 1s outrotation 1;
+}
+
+@keyframes outrotation {
+    100%{
+        opacity: 0;
+        transform: translateX(100%)
+        rotate(-260deg);
+    }
+}

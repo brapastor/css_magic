@@ -1,0 +1,36 @@
+div
+{
+    font-family:Arial;
+    background-color: #a8cf45;
+    margin: 15px 2px;
+    margin-left: 60px;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    padding: 5px 40px;
+    vertical-align: middle;
+}
+
+.reboteIn{
+    animation: 1s reboteIn 1;
+}
+
+@keyframes reboteIn {
+    0%{
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    70%{
+        transform: scale(0.9);
+    }
+
+}
