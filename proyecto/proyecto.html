@@ -10,81 +10,97 @@
 
 
         <div id="hour1" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3"></div>
-            <div class="card c4"></div>
-            <div class="card c5"></div>
-            <div class="card c6"></div>
-            <div class="card c7"></div>
-            <div class="card c8"></div>
-            <div class="card c9"></div>
+
         </div>
 
         <div id="hour2" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3">3</div>
-            <div class="card c4">4</div>
-            <div class="card c5">5</div>
-            <div class="card c6"></div>
-            <div class="card c7"></div>
-            <div class="card c8"></div>
-            <div class="card c9"></div>
+
         </div>
 
         <div id="minute1" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3">3</div>
-            <div class="card c4">4</div>
-            <div class="card c5">5</div>
-            <div class="card c6"></div>
-            <div class="card c7"></div>
-            <div class="card c8"></div>
-            <div class="card c9"></div>
+
         </div>
 
         <div id="minute2" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3">3</div>
-            <div class="card c4">4</div>
-            <div class="card c5">5</div>
-            <div class="card c6">6</div>
-            <div class="card c7">7</div>
-            <div class="card c8">8</div>
-            <div class="card c9">9</div>
+
         </div>
 
         <div id="seconds1" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3">3</div>
-            <div class="card c4">4</div>
-            <div class="card c5">5</div>
-            <div class="card c6"></div>
-            <div class="card c7"></div>
-            <div class="card c8"></div>
-            <div class="card c9"></div>
+
         </div>
         <div id="seconds2" class="rueda">
-            <div class="card c0">0</div>
-            <div class="card c1">1</div>
-            <div class="card c2">2</div>
-            <div class="card c3">3</div>
-            <div class="card c4">4</div>
-            <div class="card c5">5</div>
-            <div class="card c6">6</div>
-            <div class="card c7">7</div>
-            <div class="card c8">8</div>
-            <div class="card c9">9</div>
+
         </div>
     </div>
+
+    <script>
+        function llenarrueda(rueda, inicio, limite) {
+            var ruedaReloj = document.getElementById(rueda);
+
+            var cadena = "";
+
+            for(var i= inicio; i< 10; i++){
+                cadena = cadena + "<div class='card c"+ i +"'>"
+                if(i <= limite) cadena = cadena + i;
+                cadena = cadena + "</div>"
+            }
+            for(var i = 0; i < inicio; i++){
+                cadena = cadena + "<div class='card c'"+i+"'>";
+                if(i<= limite) cadena = cadena + i;
+                cadena = cadena + "</div>";
+            }
+//            alert(cadena)
+            ruedaReloj.innerHTML = cadena;
+        }
+
+//        llenarrueda("minute1",1,7)
+        var time = new Date();
+        var hora1 = time.getHours();
+        while( hora1 % 10 != 0) hora1--;
+        hora1 = hora1 /10;
+        llenarrueda("hour1",hora1,2)
+
+        var hora2 = time.getHours();
+        hora2 = hora2 - (hora1*10);
+        llenarrueda("hour2",hora2,9)
+
+
+        var minu1 = time.getMinutes();
+        while( minu1 % 10 != 0) minu1--;
+        minu1 = minu1 /10;
+        llenarrueda("minute1",minu1,5)
+
+        var minute2 = time.getMinutes();
+        minute2 = minute2 - (minu1*10);
+        llenarrueda("minute2",minute2,9)
+
+
+        var seconds1 = time.getSeconds();
+        while( seconds1 % 10 != 0) seconds1--;
+        seconds1 = seconds1 /10;
+        llenarrueda("seconds1",seconds1,5)
+
+        var seconds2 = time.getSeconds();
+        seconds2 = seconds2 - (seconds1*10);
+        llenarrueda("seconds2",minute2,9)
+
+
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
